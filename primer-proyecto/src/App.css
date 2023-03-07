@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.navContainer {
+    position: sticky;
+    z-index: 100;
+    top: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-image: url(../Img/fondoheader.webp);
+    text-decoration: none;
+    background-position: top;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.containerLogo{
+    width: 140px;
+    margin-left: 20px;
+    margin-top: 3.5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.containerLista{
+    width: 60%;
+    margin-top: 2.5vh;
+    color: #fff;
+    height: 100%;
 }
 
-.card {
-  padding: 2em;
+.containerLista ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.read-the-docs {
-  color: #888;
+.containerCarrito{
+    font-size: 25px;
+    margin-right: 50px;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+.cantidadCarrito {
+    background-color: #e10600;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 30px;
+    right: 45px;
+    position: absolute;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images5.alphacoders.com/656/656541.jpg");
+}
+
+.bannerContainer {
+    text-align: center;
+    padding: 15% 0;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.banner p {
+    color: #fff;
+    opacity: 0.7;
+    font-size: 27px;
 }
