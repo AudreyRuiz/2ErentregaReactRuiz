@@ -22,7 +22,7 @@ header{
 
 .containerLista{
     width: 60%;
-    margin-top: 2.5vh;
+    margin-top: 4.8vh;
     color: #fff;
     height: 100%;
 }
@@ -35,8 +35,12 @@ header{
     font-weight: 400;
     cursor: pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
+.containerLista ul li{
+    text-decoration: none ;
+}
 .containerCarrito{
     font-size: 25px;
     margin-right: 50px;

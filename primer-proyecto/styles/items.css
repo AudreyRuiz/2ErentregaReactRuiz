@@ -6,7 +6,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.cardItems{
+.cardItems {
   height: 433px;
   width: 300px;
   padding: 20px;
@@ -14,32 +14,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* IMAGEN */
 
-.cardItems .imgCard{
+.cardItems .imgCard {
   height: 60%;
   display: flex;
   justify-content: center;
 }
 
-.cardItems .imgCard img{
+.cardItems .imgCard img {
   width: 100%;
 }
 
-
+.cardItems .imgCard img:hover{
+  transform: translateY(-40px) scale(1.25);
+}
 /* DESCRIPCION */
 
-.descriptionCard .title{
+.descriptionCard .title {
   display: flex;
   flex-direction: column;
   font-size: 21px;
   margin: 10px 0;
 }
 
-.descriptionCard .price{
+.descriptionCard .price {
   font-size: 28px;
   font-weight: bold;
   margin: 5px 0;
@@ -47,7 +49,7 @@
   display: flex;
 }
 
-.descriptionCard{
+.descriptionCard {
   margin: 5px 0;
   display: flex;
   flex-direction: column;
@@ -55,19 +57,20 @@
   align-items: center;
 }
 
-.descriptionCard .containerDescription{
+.descriptionCard .containerDescription {
   display: none;
 }
 
 /* BOTONES */
 
-.buttons{
+.buttons {
   height: 20%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.buttons #details{
+.buttons #details {
   width: 70%;
   height: 35px;
   border-radius: 50px;
@@ -79,19 +82,20 @@
   margin-left: 2px;
 }
 
-.buttons #details:hover{
+.buttons #details:hover {
   background-color: #101820;
 }
 
-.buttons #addCart{
+.buttons #addCart {
   background-color: #e10600;
   height: 37px;
   width: 37px;
   border-radius: 50%;
   border: none;
   margin-left: 7px;
+  cursor: pointer;
 }
 
-.buttons #addCart:hover{
+.buttons #addCart:hover {
   background-color: #101820;
 }

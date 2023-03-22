@@ -4,15 +4,15 @@ import "../../../styles/items.css"
 import Description from "./description";
 import Details from "./Details";
 import AddCart from "./AddCart";
-import ImgPrueba from "../../../Img/poloRb.jpg"
 
-const CardItem = () => {
+const CardItem = (props) => {
   return (
     <div className="cardItems">
-      <Image imagen={ImgPrueba}/>
+      <Image imagen={props.imagen}/>
       <Description 
-      title="Oracle Red Bull Racing 2022 Team Polo"
-      price="89 $"
+      title={props.title}
+      cantidad={props.cantidad}
+      price={props.precio}
       />
       <div className="buttons">
         <Details />

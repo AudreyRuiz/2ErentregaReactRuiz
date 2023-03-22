@@ -14,6 +14,9 @@ const Description = (props) => {
                 </p>
             </div>
 
+            <p className='cantidad'>
+                {props.cantidad}
+            </p>
             <span className='price'>
                 {props.price}
             </span>
