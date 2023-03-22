@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.cardItems{
+  height: 433px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+/* IMAGEN */
+
+.cardItems .imgCard{
+  height: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.cardItems .imgCard img{
+  width: 100%;
+}
+
+
+/* DESCRIPCION */
+
+.descriptionCard .title{
+  display: flex;
+  flex-direction: column;
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.descriptionCard .price{
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #e10600;
+  display: flex;
+}
+
+.descriptionCard{
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  align-items: center;
+}
+
+.descriptionCard .containerDescription{
+  display: none;
+}
+
+/* BOTONES */
+
+.buttons{
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.buttons #details{
+  width: 70%;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #e10600;
+  color: #fff;
+  border: none;
+  font-size: 21px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.buttons #details:hover{
+  background-color: #101820;
+}
+
+.buttons #addCart{
+  background-color: #e10600;
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 7px;
+}
+
+.buttons #addCart:hover{
+  background-color: #101820;
+}
