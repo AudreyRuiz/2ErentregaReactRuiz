@@ -3,7 +3,9 @@ import Image from "./image";
 import "../../../styles/items.css"
 import Description from "./description";
 import Details from "./Details";
-import AddCart from "./AddCart";
+import ButtonAddCart from "./ButtonAddCart";
+import { Link } from "react-router-dom";
+import cart from "../../../Img/cart-white.svg"
 
 const CardItem = (props) => {
   return (
@@ -16,7 +18,10 @@ const CardItem = (props) => {
       />
       <div className="buttons">
         <Details />
-        <AddCart />
+        <ButtonAddCart 
+        id={props.id}
+        svg={cart}
+        />
       </div>
     </div>
   );

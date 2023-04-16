@@ -2,10 +2,13 @@ import React from "react";
 import Brand from "./Brand";
 import ItemListContainer from "./ItemListContainer";
 import CartWidget from "./CartWidget";
+import ContainerCart from "./ContainerCart";
+import ContextCart from "./ContextCart";
 
 const NavBar = () => {
   return (
-    <div className="navContainer">
+    // <div className="navContainer">
+    <ContextCart>
       <header>
         <div className="containerLogo">
           <Brand />
@@ -21,9 +24,14 @@ const NavBar = () => {
           />
         </nav>
 
-        <div className="containerCarrito"> <CartWidget /> </div>
+        <div className="containerCarrito">
+          {" "}
+          <CartWidget />{" "}
+        </div>
+        <ContainerCart />
       </header>
-    </div>
+    </ContextCart>
+    // </div>
   );
 };
 

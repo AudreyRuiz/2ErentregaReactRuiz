@@ -1,5 +1,5 @@
 import React from "react";
-import CardItem from "./cardItem";
+import CardItem from "./CardItem";
 import fetchSimulation from "../../../utils/fetchSimulation";
 import products from "../../../utils/products.json";
 import { useState, useEffect } from "react";
@@ -12,11 +12,11 @@ const ContainerCardItems = () => {
 
   useEffect(() => {
     if (idCategory == undefined) {
-      fetchSimulation(products, 2000)
+      fetchSimulation(products, 1000)
       .then(resp => setDatos(resp))
       .catch(error => console.log(error));
     } else{
-      fetchSimulation(products.filter(find => find.type == idCategory), 2000)
+      fetchSimulation(products.filter(filter => filter.type == idCategory), 2000)
       .then(resp => setDatos(resp))
       .catch(error => console.log(error));
     }
