@@ -7,7 +7,7 @@
 }
 
 .cardItems {
-  height: 433px;
+  height: 465px;
   width: 300px;
   padding: 20px;
   margin: 20px;
@@ -65,13 +65,15 @@
 
 .buttons {
   height: 15%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1vh;
 }
 
 .buttons #details {
-  width: 70%;
+  width: 50%;
   height: 35px;
   border-radius: 50px;
   background-color: #e10600;
@@ -79,7 +81,8 @@
   border: none;
   font-size: 21px;
   cursor: pointer;
-  margin-left: 2px;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttons #details:hover {
@@ -87,6 +90,7 @@
 }
 
 .buttons #addCart {
+  width: 15%;
   background-color: #e10600;
   height: 47px;
   width: 47px;

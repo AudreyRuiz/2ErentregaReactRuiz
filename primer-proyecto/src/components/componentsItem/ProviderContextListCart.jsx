@@ -20,7 +20,7 @@ const ProviderContextListCart = ( {children} ) => {
         let add = true;
         for(let product of listCart) {  
             if(product.id === id){
-                let quantity = product.quantity;
+                let quantity = product.cantidad;
 
                 if(quantity < producAdd.cantidad){
                     const newQuantity = {...product, quantity: quantity + 1}

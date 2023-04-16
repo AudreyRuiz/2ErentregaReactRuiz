@@ -23,7 +23,7 @@ const DetailsItem = () => {
                 datos.map(items => (
                     <>
                     <div className="containerLeft">
-                        <Image imagen={datos[0].imageProduct.Image} />
+                        <Image imagen={datos[0].imageProduct.img} />
                     </div>
 
                     <div className="containerRigth">

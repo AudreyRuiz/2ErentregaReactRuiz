@@ -37,9 +37,9 @@ const ContainerCart = () => {
                                 key={producto.id}
                                 id={producto.id}
                                 title={producto.title}
-                                image={producto.imageProduct.firtsImage}
-                                quantity={producto.quantity}
-                                price={producto.price}
+                                image={producto.image}
+                                quantity={producto.cantidad}
+                                price={producto.precio}
                             />
                         ))
                     }   

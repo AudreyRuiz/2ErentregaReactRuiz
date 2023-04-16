@@ -6,7 +6,7 @@ import Details from "./Details";
 import ButtonAddCart from "./ButtonAddCart";
 import { Link } from "react-router-dom";
 import cart from "../../../Img/cart-white.svg"
-
+import ButtonDetalles from "./ButtonDetalles"
 const CardItem = (props) => {
   return (
     <div className="cardItems">
@@ -17,7 +17,11 @@ const CardItem = (props) => {
       price={props.precio}
       />
       <div className="buttons">
-        <Details />
+      <Link to={ `/items/${props.id}`}>
+                    <ButtonDetalles 
+                        txt="Ver detalles" 
+                    />
+                </Link>
         <ButtonAddCart 
         id={props.id}
         svg={cart}
