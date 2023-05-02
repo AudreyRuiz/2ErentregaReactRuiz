@@ -31,14 +31,14 @@ const ContainerCart = () => {
 
                 <div className="containerItemsCart">
                     {
-                        (listCart.length === 0 ) ? <span className="emptyCart">Tu carrito esta vacio, ¡llenalo!</span>
+                        (listCart.length === 0 ) ? <span className="emptyCart">Tu carrito esta vacio, ¡compra ahora!</span>
                         : listCart.map(producto => ( 
                             <ItemCart 
                                 key={producto.id}
                                 id={producto.id}
-                                title={producto.title}
-                                image={producto.image}
-                                quantity={producto.cantidad}
+                                title={producto.nombre}
+                                image={producto.img}
+                                quantity={producto.quantity}
                                 price={producto.precio}
                             />
                         ))

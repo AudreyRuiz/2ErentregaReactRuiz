@@ -1,84 +1,95 @@
 .navContainer {
-    position: sticky;
-    z-index: 100;
-    top: 0;
+  position: sticky;
+  z-index: 100;
+  top: 0;
 }
 
-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 12vh;
-    background-image: url(../Img/fondoheader.webp);
-    text-decoration: none;
-    background-position: top;
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  background-image: url(../Img/fondoheader.webp);
+  text-decoration: none;
+  background-position: top;
 }
 
-.containerLogo{
-    width: 140px;
-    margin-left: 20px;
-    margin-top: 3.5vh;
+.containerLogo {
+  width: 140px;
+  margin-left: 20px;
+  margin-top: 3.5vh;
 }
 
-.containerLista{
-    width: 60%;
-    margin-top: 4.8vh;
-    color: #fff;
-    height: 100%;
+.containerLista {
+  width: 60%;
+  margin-top: 4.8vh;
+  color: #fff;
+  height: 100%;
 }
 
-.containerLista ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 400;
-    cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+.containerLista ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
 }
 
-.containerLista ul li{
-    text-decoration: none ;
+.containerLista ul li {
+  text-decoration: none;
 }
-.containerCarrito{
-    font-size: 25px;
-    margin-right: 50px;
-    margin-top: 4vh;
-    cursor: pointer;
+.containerCarrito {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  font-size: 25px;
+  margin-right: 50px;
+  margin-top: 4vh;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
-.cantidadCarrito {
-    background-color: #e10600;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 12px;
-    padding: 4px;
-    top: 30px;
-    right: 45px;
-    position: absolute;
+.containerCarrito .cantidadCarrito {
+  background-color: #e10600;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 30px;
+  right: 45px;
+  position: absolute;
+}
+
+.containerCarrito .cantidadCarrito .cantCart{
+  color: white;
 }
 
 .banner {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images5.alphacoders.com/656/656541.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images5.alphacoders.com/656/656541.jpg");
 }
 
 .bannerContainer {
-    text-align: center;
-    padding: 15% 0;
+  text-align: center;
+  padding: 15% 0;
 }
 
 .banner h1 {
-    color: #fff;
-    font-size: 56px;
-    font-weight: bold;
+  color: #fff;
+  font-size: 56px;
+  font-weight: bold;
 }
 
 .banner p {
-    color: #fff;
-    opacity: 0.7;
-    font-size: 27px;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 27px;
 }

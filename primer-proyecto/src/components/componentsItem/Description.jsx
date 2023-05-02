@@ -2,13 +2,13 @@ import React from 'react'
 
 const Description = (props) => {
     return (
-        <div className='descriptionCard'>
+        <div className='.cardDescription'>
             <h2 className='title'>
                 {props.title}
             </h2>
 
-            <div className='containerDescription'>
-                <span className='descriptionTitle'> Descripcion</span>
+            <div className='description'>
+                <span className='descriptionTitle'> Descripcion :</span>
                 <p className='parrafo'>
                     {props.parrafo}
                 </p>

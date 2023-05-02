@@ -14,7 +14,7 @@ const CardItem = (props) => {
       <Description 
       title={props.title}
       cantidad={props.cantidad}
-      price={props.precio}
+      price={props.price}
       />
       <div className="buttons">
       <Link to={ `/items/${props.id}`}>

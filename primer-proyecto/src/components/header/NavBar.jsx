@@ -25,8 +25,7 @@ const NavBar = () => {
         </nav>
 
         <div className="containerCarrito">
-          {" "}
-          <CartWidget />{" "}
+          <CartWidget />
         </div>
         <ContainerCart />
       </header>
