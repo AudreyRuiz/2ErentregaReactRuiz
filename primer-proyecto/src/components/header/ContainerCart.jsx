@@ -1,63 +1,89 @@
-import React from 'react'
-import "../../../styles/containterCart.css"
+import React from "react";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
+import "../../../styles/containterCart.css";
 import close from "../../../Img/close.svg";
 import ItemCart from "./ItemCart";
 import clear from "../../../Img/clear.svg";
 import { useContext } from "react";
 import { controllerShowCart } from "./ContextCart";
 import { listCartContext } from "../componentsItem/ProviderContextListCart";
+import swal from 'sweetalert';
 
 const ContainerCart = () => {
+  const { cartShow, setCartShow } = useContext(controllerShowCart);
+  const { listCart, clearCart } = useContext(listCartContext);
 
-    const { cartShow, setCartShow} = useContext(controllerShowCart);
-    const {listCart, clearCart } = useContext(listCartContext);
+  const style = {
+    display: cartShow,
+  };
 
-    const style = {
-        display: cartShow
-    }
+  const order = {
+    buyer: {
+      name: "audrey",
+      email: "audrey@outlook.com",
+      phone: "516132",
+      direccion: "mex",
+    },
+    items: listCart.map((producto) => ({
+      key: producto.id,
+      id: producto.id,
+      title: producto.nombre,
+      image: producto.img,
+      quantity: producto.quantity,
+      price: producto.precio,
+    })),
+  };
 
-    const closeCart = () => {
-        setCartShow( (cartShow === "none") ? "flex" : "none" )
-    }
+  const handleClick = () => {
+    clearCart(clearCart === "true");
+    swal("Muchas gracias!", "Tu compra a sido aceptada!", "success");
+    const db = getFirestore();
+    const ordersCollection = collection(db, "orders");
+    addDoc(ordersCollection, order).then(({ id }) => console.log(id));
+  };
 
-    return(
-        
-            <div className="cart" style={style} >
-                <div className="cerrar">
-                    <button className="close" onClick={closeCart}>
-                        <img src={close}></img>
-                    </button>
-                </div>
+  const closeCart = () => {
+    setCartShow(cartShow === "none" ? "flex" : "none");
+  };
 
-                <div className="containerItemsCart">
-                    {
-                        (listCart.length === 0 ) ? <span className="emptyCart">Tu carrito esta vacio, ¡compra ahora!</span>
-                        : listCart.map(producto => ( 
-                            <ItemCart 
-                                key={producto.id}
-                                id={producto.id}
-                                title={producto.nombre}
-                                image={producto.img}
-                                quantity={producto.quantity}
-                                price={producto.precio}
-                            />
-                        ))
-                    }   
-                </div>
+  return (
+    <div className="cart" style={style}>
+      <div className="cerrar">
+        <button className="close" onClick={closeCart}>
+          <img src={close}></img>
+        </button>
+      </div>
 
-                <div className="TerminarCompra">
-                    
-                    <button className="terminar" >
-                        Terminar compra
-                    </button>
+      <div className="containerItemsCart">
+        {listCart.length === 0 ? (
+          <span className="emptyCart">
+            Tu carrito esta vacio, ¡compra ahora!
+          </span>
+        ) : (
+          listCart.map((producto) => (
+            <ItemCart
+              key={producto.id}
+              id={producto.id}
+              title={producto.nombre}
+              image={producto.img}
+              quantity={producto.quantity}
+              price={producto.precio}
+            />
+          ))
+        )}
+      </div>
 
-                    <button className="clear" onClick={clearCart}>
-                        <img src={clear}></img>
-                    </button>
-                </div>
-            </div>
-        
-    )
-}
+      <div className="TerminarCompra">
+        <button className="terminar" onClick={handleClick}>
+          Terminar compra
+        </button>
 
-export default ContainerCart
+        <button className="clear" onClick={clearCart}>
+          <img src={clear}></img>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ContainerCart;
